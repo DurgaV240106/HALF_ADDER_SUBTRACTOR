@@ -11,7 +11,7 @@ To design a half adder and half subtractor circuit and verify its truth table in
 Hardware – PCs, Cyclone II , USB flasher 
 
 Software – Quartus prime Theory Adders are digital circuits that carry out the addition of numbers.
-
+## Figure -01 HALF ADDER
 **Half Adder**
 
 Half adder is a combinational circuit that performs simple addition of two binary numbers. The input variables designate the augend and addend bits; the output variables produce the sum and carry. It is necessary to specify two output variables because the result may consist of two binary digits.
@@ -20,7 +20,7 @@ Sum = A’B+AB’ =A ⊕ B Carry = AB
 
 ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/bd4a0b2c-cdbc-4184-ab08-81578f121e1f)
 
-Figure -01 HALF ADDER
+## Figure -02 HALF Subtractor
 
 **Half Subtractor**
 
@@ -30,10 +30,6 @@ Diff = A’B+AB’ =A ⊕ B
 Borrow = A’B
 
  ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/d76b099c-513f-4e7c-843a-e2fd028a531a)
-
-Figure -02 HALF Subtractor
-
-**Truthtable**
 
 **Procedure**
 
@@ -52,10 +48,45 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by:DURGA V
+RegisterNumber:212223230052
+*/
 
-**RTL Schematic**
+## Half_adder program:
+```
+module halfadd_top(a,b,sum,carry);
+input a,b; 
+output sum,carry; 
+assign sum = a^b; 
+assign carry = a & b; 
+endmodule
+```
+## Half_subtractor program:
+```
+module halfsub_top(a,b,D,Bo);
+input a,b;
+output D,Bo;
+// Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+assign D = a ^ b;
+assign Bo = ~a & b;
+endmodule
+```
+## Truthtable
+![image](https://github.com/user-attachments/assets/48999a38-6515-40fc-8878-279c8a890b34)
 
-**Output/TIMING Waveform**
+## RTL Schematic:
+## Half_adder :
+![image](https://github.com/user-attachments/assets/9caeaa20-1d0e-4096-b71b-ce74818b652c)
 
-**Result:**
+## Half_subtractor
+![image](https://github.com/user-attachments/assets/0036f0b5-f86c-4d17-ab4f-ba6d559e286f)
+
+## Output/TIMING Waveform
+## Half_adder:
+![image](https://github.com/user-attachments/assets/dbd9006d-8a58-4a8d-a4ae-144cadad11c0)
+
+## Half_subtractor:
+![image](https://github.com/user-attachments/assets/a248353e-5a73-4d1a-9360-907dfcc99a96)
+
+## Result:
+To design a half adder and half subtractor circuit and verify its truth table in Quartus using Verilog programming its are verifid.
