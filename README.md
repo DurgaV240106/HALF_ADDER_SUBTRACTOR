@@ -72,7 +72,8 @@ assign Bo = ~a & b;
 endmodule
 ```
 ## Truthtable
-![image](https://github.com/user-attachments/assets/48999a38-6515-40fc-8878-279c8a890b34)
+
+![image](https://github.com/user-attachments/assets/7e197592-cbbb-4d94-99dc-9d736e5b9804)
 
 ## RTL Schematic:
 ## Half_adder :
